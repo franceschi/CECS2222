@@ -5,7 +5,7 @@ int main() {
 	double radius;
 
 	cout << "Welcome to the Circle program!\n";
-	cout << "I will print the area, diameter and circumference of any circle. \n";
+	cout << "I calculate area, diameter and circumference of any circle.\n";
 	cout << "\nEnter the radius: ";
 	cin >> radius;
 	
