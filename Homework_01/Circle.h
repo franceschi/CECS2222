@@ -2,20 +2,21 @@
 #include <iostream>
 #ifndef CIRCLE_H
 #define CIRCLE_H
+using namespace std;
 
-const double PI = 3.1415;
+
 
 class Circle
 {
 private:
 	double radius;
+	const double PI = 3.14159;
 public:
-	Circle();
-	Circle(double tempRadius = 1);
+	//Constructors & Destructors:
+	Circle(double tempRadius = 0.0);
 	Circle(Circle & tempCircle);
 	~Circle();
-
-	void setCircle(double raius);
+	//Methods:
 	void setRadius(double);
 	double getRadius() const;
 	double getArea() const;

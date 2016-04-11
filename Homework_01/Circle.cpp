@@ -1,11 +1,5 @@
-using namespace std;
 #include "Circle.h"
 
-
-Circle::Circle() {
-
-	cout << "\nInitializing constructor...\n";
-}
 
 Circle::Circle(double tempRadius):radius(tempRadius) {}
 
@@ -15,7 +9,6 @@ Circle::~Circle()
 {
 	cout << "\nDestroying all objects created...\n";
 }
-
 
 void Circle::setRadius(double tempRadius)
 {
@@ -44,7 +37,7 @@ double Circle::getCircumference() const
 
 void Circle::print() const
 {
-	cout << "Radius: " << getRadius() << endl;
+	cout << "\nRadius entered: " << getRadius() << endl;
 	cout << "Area: " << getArea() << endl;
 	cout << "Diameter: " << getDiameter() << endl;
 	cout << "Circumference: " << getCircumference() << endl;
