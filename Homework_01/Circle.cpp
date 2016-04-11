@@ -2,61 +2,50 @@ using namespace std;
 #include "Circle.h"
 
 
-Circle::Circle()
-{
+Circle::Circle() {
 
+	cout << "\nInitializing constructor...\n";
 }
 
+Circle::Circle(double tempRadius):radius(tempRadius) {}
+
+Circle::Circle(Circle & tempCircle) { setRadius(tempCircle.getRadius()); }
 
 Circle::~Circle()
 {
+	cout << "\nDestroying all objects created...\n";
 }
 
-Circle::~Circle()
+
+void Circle::setRadius(double tempRadius)
 {
-	cout << "\nDestroying all objects created...\n\n";
+	radius = tempRadius;
 }
 
-Circle(double tempRadius)
+double Circle::getRadius() const
 {
+	return radius;
 }
 
-Circle(Circle & tempCircle)
+double Circle::getArea() const
 {
+	return (PI*getRadius()*getRadius());
 }
 
-Circle::~Circle()
+double Circle::getDiameter() const
 {
+	return (getRadius()*2);
 }
 
-void setCircle(double raius)
+double Circle::getCircumference() const
 {
+	return (PI*getDiameter());
 }
 
-void setRadius(double)
+void Circle::print() const
 {
-}
-
-double getRadius() const
-{
-	return 0.0;
-}
-
-double getArea() const
-{
-	return 0.0;
-}
-
-double getDiameter() const
-{
-	return 0.0;
-}
-
-double getCircumference() const
-{
-	return 0.0;
-}
-
-void print() const
-{
+	cout << "Radius: " << getRadius() << endl;
+	cout << "Area: " << getArea() << endl;
+	cout << "Diameter: " << getDiameter() << endl;
+	cout << "Circumference: " << getCircumference() << endl;
 }

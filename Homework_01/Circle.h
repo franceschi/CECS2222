@@ -3,7 +3,7 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
-const double pi = 3.14
+const double PI = 3.1415;
 
 class Circle
 {
