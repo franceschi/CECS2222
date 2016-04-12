@@ -147,7 +147,10 @@
     <ClInclude Include="StudentTestScores.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestScore.cpp" />
+    <ClCompile Include="StudentTestScore.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

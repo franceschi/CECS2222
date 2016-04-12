@@ -9,17 +9,24 @@ void displayStudent(StudentTestScores);
 int main()
 {
 	// Create a StudentTestScores object.
-	StudentTestScores student1("Kelly Thorton", 3);
+	StudentTestScores student1("Miguel Franceschi", 3);
 	student1.setTestScore(100.0, 0);
 	student1.setTestScore(95.0, 1);
 	student1.setTestScore(80, 2);
 
 	// Create two more StudentTestScores objects.
-	StudentTestScores student2("Jimmy Griffin", 5);
-	StudentTestScores student3("Kristen Lee", 10);
+	StudentTestScores student2("Michael Cordoba", 3);
+	student2.setTestScore(99.0, 0);
+	student2.setTestScore(99.0, 1);
+	student2.setTestScore(99.0, 2);
+
+	StudentTestScores student3("Claudia Talavera", 3);
+	student3.setTestScore(100.0, 0);
+	student3.setTestScore(100.0, 1);
+	student3.setTestScore(100.0, 2);
 
 	// Assign student1 to student2 and student3.
-	student3 = student2 = student1;
+	//student3 = student2 = student1;
 
 	// Display the objects.
 	displayStudent(student1);
