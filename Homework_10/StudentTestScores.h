@@ -1,4 +1,3 @@
-#pragma once
 #ifndef STUDENTTESTSCORES_H
 #define STUDENTTESTSCORES_H
 #include <string>
@@ -10,8 +9,6 @@ class StudentTestScores
 {
 private:
 	string studentName;  // The student's name
-
-
 	double *testScores;  // Points to array of test scores
 	int numTestScores;   // Number of test scores
 
@@ -81,7 +78,7 @@ public:
 	}
 
 	// Overloaded = operator
-	void operator=(const StudentTestScores &right)
+	const StudentTestScores operator=(const StudentTestScores &right)
 	{
 		delete[] testScores;
 		studentName = right.studentName;
@@ -89,6 +86,8 @@ public:
 		testScores = new double[numTestScores];
 		for (int i = 0; i < numTestScores; i++)
 			testScores[i] = right.testScores[i];
+		return *this;
 	}
+
 };
 #endif
