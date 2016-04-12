@@ -144,6 +144,10 @@
   <ItemGroup>
     <ClInclude Include="MyString.cpp" />
     <ClInclude Include="MyString.h" />
+    <ClInclude Include="StudentTestScores.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TestScore.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
