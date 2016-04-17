@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Homework_06", "Homework_06\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Homework_10", "Homework_10\Homework_10.vcxproj", "{E360DDF7-B58C-419A-A1E6-457F9056AD03}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WriteTextFile", "WriteTextFile\WriteTextFile.vcxproj", "{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{E360DDF7-B58C-419A-A1E6-457F9056AD03}.Release|x64.Build.0 = Release|x64
 		{E360DDF7-B58C-419A-A1E6-457F9056AD03}.Release|x86.ActiveCfg = Release|Win32
 		{E360DDF7-B58C-419A-A1E6-457F9056AD03}.Release|x86.Build.0 = Release|Win32
+		{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}.Debug|x64.ActiveCfg = Debug|x64
+		{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}.Debug|x64.Build.0 = Debug|x64
+		{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}.Debug|x86.ActiveCfg = Debug|Win32
+		{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}.Debug|x86.Build.0 = Debug|Win32
+		{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}.Release|x64.ActiveCfg = Release|x64
+		{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}.Release|x64.Build.0 = Release|x64
+		{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}.Release|x86.ActiveCfg = Release|Win32
+		{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

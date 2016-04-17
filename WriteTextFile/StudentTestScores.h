@@ -1,3 +1,4 @@
+#pragma once
 #ifndef STUDENTTESTSCORES_H
 #define STUDENTTESTSCORES_H
 #include <string>
@@ -5,7 +6,7 @@ using namespace std;
 
 const double DEFAULT_SCORE = 0.0;
 
-class StudentTestScores //agregar StudentList, StudentID,
+class StudentTestScores
 {
 private:
 	string studentName;  // The student's name

@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E360DDF7-B58C-419A-A1E6-457F9056AD03}</ProjectGuid>
+    <ProjectGuid>{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Homework_10</RootNamespace>
+    <RootNamespace>WriteTextFile</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,17 +142,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="MyString.cpp" />
-    <ClInclude Include="MyString.h" />
-    <ClInclude Include="StudentList.h" />
+    <ClCompile Include="Source.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Source1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Source2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="String.h" />
     <ClInclude Include="StudentTestScores.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="StudentList.cpp" />
-    <ClCompile Include="StudentTestScore.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

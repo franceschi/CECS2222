@@ -1,6 +1,8 @@
 // This program demonstrates the overloaded = operator returning a value.
 #include <iostream>
 #include "StudentTestScores.h"
+#include "MyString.h"
+
 using namespace std;
 
 // Function prototype
@@ -12,7 +14,7 @@ int main()
 	StudentTestScores student1("Miguel Franceschi", 3);
 	student1.setTestScore(100.0, 0);
 	student1.setTestScore(95.0, 1);
-	student1.setTestScore(80, 2);
+	student1.setTestScore(81, 2);
 
 	// Create two more StudentTestScores objects.
 	StudentTestScores student2("Michael Cordoba", 3);
@@ -21,9 +23,9 @@ int main()
 	student2.setTestScore(99.0, 2);
 
 	StudentTestScores student3("Claudia Talavera", 3);
-	student3.setTestScore(100.0, 0);
-	student3.setTestScore(100.0, 1);
-	student3.setTestScore(100.0, 2);
+	student3.setTestScore(50.0, 0);
+	student3.setTestScore(50.0, 1);
+	student3.setTestScore(50.0, 2);
 
 	// Assign student1 to student2 and student3.
 	//student3 = student2 = student1;
