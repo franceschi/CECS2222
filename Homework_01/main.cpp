@@ -21,6 +21,5 @@ int main() {
 	cout << "\nCopy by value of the empty circle: ";
 	Circle_03.print();
 
-	system("pause");
 	return 0;
 }

@@ -145,10 +145,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IntArray.h" />
+    <ClInclude Include="floatArray.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IntArray.cpp" />
+    <ClCompile Include="floatArray.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

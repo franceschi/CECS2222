@@ -23,12 +23,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IntArray.cpp">
+    <ClCompile Include="floatArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IntArray.h">
+    <ClInclude Include="floatArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

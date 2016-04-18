@@ -1,28 +1,30 @@
-// This program demonstrates an overloaded [] operator.
 #include <iostream>
-#include "IntArray.h"
+#include <iomanip>
+#include "floatArray.h"        
+
 using namespace std;
 
 int main()
 {
+	const int SIZE = 3;
+	floatArray numbers(SIZE);
+	int val, x;
 
-		const int SIZE = 20;  // Array size
+	numbers.setElement(2, 20);
 
-		IntArray table(SIZE);
+	for (x = 0; x<SIZE; x++)
+	{
+		//Store Number
+		numbers.setElement(0, 10);
+		cout << " " << numbers.getElement(x) << endl;
 
-		// Store values in the array.
-
-		
-		for (int x = 0; x < SIZE; x++)
-			table[x] = x;
-
-
-		// Display the values in the array.
-		for (int x = 0; x < SIZE; x++)
-			cout << table[x] << " ";
-		cout << endl;
-
-		
-		return 0;
-	
+	}
+	cout << endl;
+	cout << "Highest : " << numbers.getHighest() << endl;
+	cout << "Lowest: " << numbers.getLowest() << endl;
+	cout << "Average: " << numbers.getAverage() << endl;
+	cout << endl;
+	cin.get();
 }
+
+
