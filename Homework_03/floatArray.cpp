@@ -55,6 +55,18 @@ int floatArray::getElement(int element)
 	}
 }
 
+void floatArray::setHighest(double)
+{
+}
+
+void floatArray::setLowest(double)
+{
+}
+
+void floatArray::setAverage(double)
+{
+}
+
 //getHighest
 double floatArray::getHighest() const
 {

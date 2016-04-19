@@ -13,8 +13,7 @@ public:
 	floatArray(int); 
 	~floatArray();
 	void setElement(int, float);
-	int getElement(int); //Returns an element
-
+	int getElement(int);
 
 	//Setter			
 	void setHighest(double);        
@@ -27,5 +26,5 @@ public:
 	double getAverage() const;
 
 };
-#endif        // closes guard
+#endif
 
