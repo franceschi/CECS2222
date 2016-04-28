@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{13F43C03-4B53-4856-BFDE-1BF100A3169B}</ProjectGuid>
+    <ProjectGuid>{FE66620E-DD50-4EF8-B8A8-8170C917CE07}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Homework_06</RootNamespace>
+    <RootNamespace>HerenciaExample</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,7 +142,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadME.txt" />
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="twoDimensionalShape.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="twoDimensionalShape.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

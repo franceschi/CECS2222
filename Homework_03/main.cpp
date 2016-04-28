@@ -6,16 +6,24 @@ using namespace std;
 
 int main()
 {
-	const int SIZE = 3;
-	floatArray numbers(SIZE);
+	//const int SIZE = 3;
+	//floatArray numbers(SIZE);
 	int val, x;
+	float *s;
 
-	numbers.setElement(2, 20);
+	floatArray numbers();
+	
+	cout << "Enter the number for the array: ";
+	cin>> val;
 
-	for (x = 0; x<SIZE; x++)
+	s = new float[x];
+
+	for (x = 0; x<val; x++)
 	{
 		//Store Number
-		numbers.setElement(0, 10);
+		cout << "Enter a number"; 
+		cin >> *(s + x);
+		numbers.setElement(x);
 		cout << " " << numbers.getElement(x) << endl;
 
 	}
