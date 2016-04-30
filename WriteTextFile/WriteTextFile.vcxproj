@@ -150,13 +150,17 @@
     <ClCompile Include="Source1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Source2.cpp" />
+    <ClCompile Include="Source2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="StudentDate.cpp" />
+    <ClCompile Include="StudentPhone.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyString.h" />
     <ClInclude Include="StudentDate.h" />
-    <ClInclude Include="StudentTestScores.h" />
+    <ClInclude Include="StudentPhone.h" />
+    <ClInclude Include="TestScore.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

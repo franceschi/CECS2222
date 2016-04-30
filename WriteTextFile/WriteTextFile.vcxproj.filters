@@ -30,6 +30,9 @@
     <ClCompile Include="StudentDate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StudentPhone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyString.h">
@@ -38,7 +41,10 @@
     <ClInclude Include="StudentDate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StudentTestScores.h">
+    <ClInclude Include="StudentPhone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
