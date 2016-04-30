@@ -1,23 +1,24 @@
+#pragma once
 #include "StudentPhone.h"
 #include "StudentDate.h"
-using namespace std;
-#ifndef STUDENTLIST_H
-#define STUDENTLIST_H
 #include <iostream>
+#include "MyString.h"
+using namespace std;
 
-class StudentList
+class Student
 {
 private:
-	char firstName[25];
-	char lastName[25];
+	MyString firstName;
+	MyString lastName;
 	Date birthDate;
 	Phone phone;
 
+
 public:
-	StudentList(const char *const, const char *const, const Date &, const Phone &);
-	StudentList(const StudentList &);
-	StudentList();
-	~StudentList();
+	Student(const char *const, const char *const, const Date &, const Phone &);
+	Student(const Student &);
+	Student();
+	~Student();
 
 	void setValues(const char *const, const char *const, const Date &, const Phone &);
 	void setFirstName(const char *const);
@@ -33,4 +34,3 @@ public:
 	void printData()const;
 };
 
-#endif // STUDENTLIST_H

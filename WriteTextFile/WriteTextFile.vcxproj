@@ -146,12 +146,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyString.cpp" />
     <ClCompile Include="StudentDate.cpp" />
-    <ClCompile Include="StudentList.cpp" />
+    <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentPhone.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MyString.h" />
     <ClInclude Include="StudentDate.h" />
-    <ClInclude Include="StudentList.h" />
+    <ClInclude Include="Student.h" />
     <ClInclude Include="StudentPhone.h" />
     <ClInclude Include="TestScore.h" />
   </ItemGroup>

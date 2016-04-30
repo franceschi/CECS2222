@@ -59,6 +59,10 @@ MyString MyString::operator+(const MyString &aMyString)const {
 MyString operator+(const char* s, const MyString &aMyString) {
 	return(MyString(s) + aMyString);
 }
+MyString operator+(const MyString & aMyString)
+{
+	return MyString();
+}
 MyString operator+(char ch, const MyString &aMyString) {
 	return(MyString(ch) + aMyString);
 }

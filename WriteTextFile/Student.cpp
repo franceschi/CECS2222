@@ -1,13 +1,13 @@
-#include "StudentList.h"
+#include "Student.h"
 
 
-StudentList::StudentList()
+Student::Student()
 {
 	strcpy_s(firstName, "Juan");
 	strcpy_s(lastName, "Del pueblo");
 }
 
-StudentList::StudentList(const char *const tempFirstName, const char *const tempLastName, const Date &tempBirthDate, const Phone &tempPhone)
+Student::Student(const char *const tempFirstName, const char *const tempLastName, const Date &tempBirthDate, const Phone &tempPhone)
 {
 	setFirstName(tempFirstName);
 	setLastName(tempLastName);
@@ -15,21 +15,21 @@ StudentList::StudentList(const char *const tempFirstName, const char *const temp
 	setPhone(tempPhone);
 }
 
-StudentList::StudentList(const StudentList &tempStudentList)
+Student::Student(const Student &tempStudent)
 {
-	setFirstName(tempStudentList.getFirstName());
-	setLastName(tempStudentList.getLastName());
-	setDate(tempStudentList.getDate());
-	setPhone(tempStudentList.getPhone());
+	setFirstName(tempStudent.getFirstName());
+	setLastName(tempStudent.getLastName());
+	setDate(tempStudent.getDate());
+	setPhone(tempStudent.getPhone());
 }
 
-StudentList::~StudentList()
+Student::~Student()
 {
-	cout << "StudentList destructor:" << endl;
+	cout << "Student destructor:" << endl;
 	printData();
 }
 
-void StudentList::setValues(const char *const tempFirstName, const char *const tempLastName, const Date &tempBirthDay, const Phone &tempPhone)
+void Student::setValues(const char *const tempFirstName, const char *const tempLastName, const Date &tempBirthDay, const Phone &tempPhone)
 {
 	setFirstName(tempFirstName);
 	setLastName(tempLastName);
@@ -37,7 +37,7 @@ void StudentList::setValues(const char *const tempFirstName, const char *const t
 	setPhone(tempPhone);
 }
 
-void StudentList::setFirstName(const char *const tempFirstName)
+void Student::setFirstName(const char *const tempFirstName)
 {
 	int lenght;
 	lenght = strlen(tempFirstName);
@@ -46,7 +46,7 @@ void StudentList::setFirstName(const char *const tempFirstName)
 	firstName[lenght] = '\0';
 }
 
-void StudentList::setLastName(const char *const tempLastName)
+void Student::setLastName(const char *const tempLastName)
 {
 	int lenght;
 	lenght = strlen(tempLastName);
@@ -57,41 +57,41 @@ void StudentList::setLastName(const char *const tempLastName)
 
 
 
-void StudentList::setPhone(const Phone &tempPhone)
+void Student::setPhone(const Phone &tempPhone)
 {
 	phone.setAreaCode(tempPhone.getAreaCode());
 	phone.setExchange(tempPhone.getExchange());
 	phone.setLine(tempPhone.getLine());
 }
 
-void StudentList::setDate(const Date &tempDate)
+void Student::setDate(const Date &tempDate)
 {
 	birthDate.setMonth(tempDate.getMonth());
 	birthDate.setDay(tempDate.getDay());
 	birthDate.setYear(tempDate.getYear());
 }
 
-const char * StudentList::getFirstName() const
+const char * Student::getFirstName() const
 {
 	return firstName;
 }
 
-const char *StudentList::getLastName() const
+const char *Student::getLastName() const
 {
 	return lastName;
 }
 
-const Phone& StudentList::getPhone()const
+const Phone& Student::getPhone()const
 {
 	return phone;
 }
 
-const Date& StudentList::getDate()const
+const Date& Student::getDate()const
 {
 	return birthDate;
 }
 
-void StudentList::printData()const
+void Student::printData()const
 {
 	cout << "First Name:" << this->getFirstName() << endl;
 	cout << "Last Name:" << this->getLastName() << endl;

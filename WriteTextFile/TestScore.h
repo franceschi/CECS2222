@@ -1,8 +1,8 @@
 #pragma once
 #ifndef STUDENTTESTSCORES_H
 #define STUDENTTESTSCORES_H
-#include <string>
 using namespace std;
+#include <string>
 
 const double DEFAULT_SCORE = 0.0;
 

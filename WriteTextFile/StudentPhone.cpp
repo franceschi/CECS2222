@@ -1,6 +1,6 @@
 #include "StudentPhone.h"
 #include<iostream>
-#include<cstring>
+#include "MyString.h"
 using namespace::std;
 
 Phone::Phone()
@@ -51,7 +51,7 @@ void Phone::setValues( const char *tempAreaCode,  const char *tempExchange, cons
 
 Phone::~Phone() 
 {
-	cout<<"Phone object destructor for phone:"<<endl;  
+	cout<<"Phone object destructor:"<<endl;  
 	printPhone();  
 	delete [] areaCode;  
 	delete [] exchange;  

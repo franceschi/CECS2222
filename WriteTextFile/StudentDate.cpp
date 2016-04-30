@@ -2,6 +2,13 @@
 using namespace::std; 
 #include "StudentDate.h" 
 
+Date::Date()
+{
+	setMonth(12);
+	setDay(31);
+	setYear(2000);
+}
+
 Date::Date(int tempMonth, int tempDay, int tempYear)
 {
 	setValues(tempMonth, tempDay, tempYear);
