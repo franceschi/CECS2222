@@ -32,13 +32,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StudentTestScores.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MyString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StudentDate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StudentTestScores.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
