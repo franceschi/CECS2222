@@ -19,11 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{57B6305A-975A-4DDD-88B7-B4B4645F4EEE}</ProjectGuid>
+    <ProjectGuid>{967C8A80-7816-41C7-8073-C3FAFA2E43F0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>WriteTextFile</RootNamespace>
+    <RootNamespace>Exam_02</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>Exam II</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -143,16 +142,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="MyString.cpp" />
-    <ClCompile Include="StudentDate.cpp" />
     <ClCompile Include="Student.cpp" />
+    <ClCompile Include="StudentDate.cpp" />
+    <ClCompile Include="StudentList.cpp" />
     <ClCompile Include="StudentPhone.cpp" />
+    <ClCompile Include="TestScore.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyString.h" />
-    <ClInclude Include="StudentDate.h" />
     <ClInclude Include="Student.h" />
+    <ClInclude Include="StudentDate.h" />
+    <ClInclude Include="StudentList.h" />
     <ClInclude Include="StudentPhone.h" />
     <ClInclude Include="TestScore.h" />
   </ItemGroup>

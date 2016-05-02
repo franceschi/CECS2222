@@ -1,9 +1,12 @@
-#pragma once
-
 #include<iostream>
+#include<cstdlib>
+#include<string>
 #include<cstring>
 
 using namespace::std;
+
+#ifndef MYSTRING_H
+#define MYSTRING_H
 
 const int MAX_LEN = 80;
 
@@ -22,8 +25,10 @@ public:
 	MyString &operator=(char cha);
 	MyString &operator =(const MyString &aMyString);
 
+
 	void setS(const char *s);
 	const char* getS()const;
+
 
 	MyString operator+(const char* s)const;
 	MyString operator+(char ch)const;
@@ -83,4 +88,7 @@ public:
 	MyString operator++(int);
 	MyString &operator--();
 	MyString operator--(int);
+
 };
+
+#endif
