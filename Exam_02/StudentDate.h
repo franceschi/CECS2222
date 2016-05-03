@@ -7,27 +7,30 @@ using namespace std;
 
 class StudentDate
 {
-private:
-	int month, day, year;
-	int checkDay(int) const;
-	int checkMonth(int) const;
+    friend istream & operator >>(istream &, StudentDate &);
+    friend ostream & operator <<(ostream &, const StudentDate &);
 
-public:
-	StudentDate();
-	StudentDate(int, int, int);
-	StudentDate(const StudentDate &);
-	~StudentDate();
+    private:
+        int month, day, year;
+        int checkDay(int) const;
+        int checkMonth(int) const;
 
-	void setValues(int, int, int);
-	void setMonth(int);
-	void setDay(int);
-	void setYear(int);
+    public:
+        StudentDate();
+        StudentDate(int, int, int);
+        StudentDate(const StudentDate &);
+        ~StudentDate();
 
-	int getMonth() const;
-	int getDay() const;
-	int getYear() const;
+        void setValues(int,int,int);
+        void setMonth(int);
+        void setDay(int);
+        void setYear(int);
 
-	void printDate() const;
+        int getMonth() const;
+        int getDay() const;
+        int getYear() const;
+
+        StudentDate & operator =(const StudentDate &);
 
 };
 
