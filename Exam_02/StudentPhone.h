@@ -9,27 +9,30 @@ using namespace std;
 
 class StudentPhone
 {
-private:
-	char *areaCode;     //3-digit area code
-	char *exchange;      //3 digit exchange
-	char *line;           //4 digit of line
+    friend istream & operator >>(istream &, StudentPhone &);
+    friend ostream & operator <<(ostream &, const StudentPhone &);
 
-public:
-	StudentPhone(const char *, const char *, const char *);
-	StudentPhone(const StudentPhone &);
-	StudentPhone();
-	~StudentPhone();
+    private:
+        char *areaCode;     //3-digit area code
+        char *exchange;      //3 digit exchange
+        char *line;           //4 digit of line
 
-	void setValues(const char *, const char *, const char *);
-	void setAreaCode(const char *);
-	void setExchange(const char *);
-	void setLine(const char *);
+    public:
+        StudentPhone(const char *, const char *, const char *);
+        StudentPhone(const StudentPhone &);
+        StudentPhone();
+        ~StudentPhone();
 
-	const char *getAreaCode() const;
-	const char *getExchange() const;
-	const char *getLine() const;
+        void setValues(  const char *,  const char *, const char *);
+        void setAreaCode( const char *);
+        void setExchange( const char *);
+        void setLine(  const char *);
 
-	void printPhone() const;
+        const char *getAreaCode() const;
+        const char *getExchange() const;
+        const char *getLine() const;
+
+        StudentPhone & operator =(const StudentPhone &);
 };
 
 #endif // STUDENTPHONE_H

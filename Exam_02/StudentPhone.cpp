@@ -2,14 +2,48 @@
 
 using namespace::std;
 
+istream & operator >>(istream & in, StudentPhone & tempPhone)
+{
+    StudentPhone temp;
+
+    temp.areaCode = new char[4];
+    temp.exchange = new char[4];
+    temp.line = new char[5];
+
+    cout << "Enter Phone Number: " << endl;
+    cout << "Enter 3 Digit area code: ";
+    in >> temp.areaCode;
+
+    cout << "Enter 3 digit exchange: ";
+    in >> temp.exchange;
+
+    cout << "Enter 4 digit line: ";
+    in >> temp.line;
+
+    tempPhone = temp;
+
+    delete []temp.areaCode;
+    delete []temp.exchange;
+    delete []temp.line;
+
+    return in;
+}
+
+ostream & operator <<(ostream  & out, const StudentPhone & tempPhone)
+{
+    out << "(" << tempPhone.getAreaCode() << ")" << tempPhone.getExchange() << "-" << tempPhone.getLine();
+
+    return out;
+}
+
 StudentPhone::StudentPhone()
 {
 	areaCode = "000";
-	exchange = "000";
-	line = "0000";
+	exchange="000";
+	line="0000";
 }
 
-StudentPhone::StudentPhone(const char *tempAreaCode, const char *tempExchange, const char *tempLine)
+StudentPhone::StudentPhone( const char *tempAreaCode, const char *tempExchange, const char *tempLine)
 {
 	setAreaCode(tempAreaCode);
 	setExchange(tempExchange);
@@ -29,10 +63,10 @@ void StudentPhone::setAreaCode(const char *tempAreaCode)
 	strcpy(areaCode, tempAreaCode);
 }
 
-void StudentPhone::setExchange(const char *tempExchange)
+void StudentPhone::setExchange( const char *tempExchange)
 {
 	exchange = new char[strlen(tempExchange) + 1];
-	strcpy(exchange, tempExchange);
+	strcpy(exchange,tempExchange);
 }
 
 void StudentPhone::setLine(const char *tempLine)
@@ -41,7 +75,7 @@ void StudentPhone::setLine(const char *tempLine)
 	strcpy(line, tempLine);
 }
 
-void StudentPhone::setValues(const char *tempAreaCode, const char *tempExchange, const char *tempLine)
+void StudentPhone::setValues( const char *tempAreaCode,  const char *tempExchange, const char *tempLine)
 {
 	setAreaCode(tempAreaCode);
 	setExchange(tempExchange);
@@ -50,10 +84,10 @@ void StudentPhone::setValues(const char *tempAreaCode, const char *tempExchange,
 
 StudentPhone::~StudentPhone()
 {
-	cout << "Phone object destructor for phone:" << endl;
-	delete[] areaCode;
-	delete[] exchange;
-	delete[] line;
+	cout<<"Phone object destructor for phone: "<<endl;
+	delete [] areaCode;
+	delete [] exchange;
+	delete [] line;
 }
 
 const char *StudentPhone::getAreaCode() const
@@ -71,7 +105,11 @@ const char *StudentPhone::getLine() const
 	return line;
 }
 
-void StudentPhone::printPhone() const
+StudentPhone & StudentPhone::operator =(const StudentPhone & tempPhone)
 {
-	cout << "(" << getAreaCode() << ")" << getExchange() << "-" << getLine() << endl;
+    this->areaCode = tempPhone.areaCode;
+    this->exchange = tempPhone.exchange;
+    this->line = tempPhone.line;
+
+    return (*this);
 }

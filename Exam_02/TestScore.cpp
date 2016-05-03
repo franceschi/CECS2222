@@ -1,72 +1,88 @@
 #include "TestScore.h"
 
-TestScore::TestScore()
+template <class T>
+TestScore<T>::TestScore()
 {
-	numTestScore = DEFAULT_SCORE;
-	createTestScoreArray(1);
+    numTestScore = DEFAULT_SCORE;
+    createTestScoreArray(1);
 }
 
-TestScore::TestScore(MyString name, int numScores)
+template <class T>
+TestScore<T>::TestScore(MyString name, int numScores)
 {
-	studentName = name;
-	createTestScoreArray(numScores);
+    studentName = name;
+    createTestScoreArray(numScores);
 }
 
-TestScore::TestScore(const TestScore & aTestScore)
+template <class T>
+TestScore<T>::TestScore(const TestScore & aTestScore)
 {
-	studentName = aTestScore.studentName;
-	numTestScore = aTestScore.numTestScore;
-	testScores = new double[numTestScore];
-	for (int i = 0; i < numTestScore; i++)
-		testScores[i] = aTestScore.testScores[i];
+    studentName = aTestScore.studentName;
+    numTestScore = aTestScore.numTestScore;
+    testScores = new T[numTestScore];
+    for(int i = 0; i < numTestScore; i++)
+        testScores[i] = aTestScore.testScores[i];
 }
 
-TestScore::~TestScore()
+
+template <class T>
+TestScore<T>::~TestScore()
 {
-	delete[] testScores;
+    delete [] testScores;
 }
 
-void TestScore::createTestScoreArray(int size)
+template <class T>
+void TestScore<T>::createTestScoreArray(int size)
 {
-	numTestScore = size;
-	testScores = new double[size];
-	for (int i = 0; i < size; i++)
-		testScores[i] = DEFAULT_SCORE;
+    numTestScore = size;
+    testScores = new double[size];
+    for(int i = 0; i < size; i++)
+        testScores[i] = DEFAULT_SCORE;
 }
 
-void TestScore::setTestScore(double score, int index)
+template <class T>
+void TestScore<T>::setTestScore(double score, int index)
 {
-	testScores[index] = score;
+    testScores[index] = score;
+}
+template <class T>
+void TestScore<T>::setStudentName(MyString name)
+{
+    studentName = name;
 }
 
-void TestScore::setStudentName(MyString name)
+template <class T>
+MyString TestScore<T>::getStudentName() const
 {
-	studentName = name;
+    return studentName;
+}
+template <class T>
+int TestScore<T>::getNumTestScore() const
+{
+    return numTestScore;
 }
 
-MyString TestScore::getStudentName() const
+template <class T>
+T TestScore<T>::getTestScore(int index) const
 {
-	return studentName;
+    return testScores[index];
 }
 
-int TestScore::getNumTestScore() const
+template <class T>
+T & TestScore<T>::operator [](int index)
 {
-	return numTestScore;
+    return testScores[index];
 }
 
-double TestScore::getTestScore(int index) const
+template <class T>
+TestScore<T> & TestScore<T>::operator =(const TestScore & aTestScore)
 {
-	return testScores[index];
-}
+    delete[] testScores;
+    studentName = aTestScore.studentName;
+    numTestScore = aTestScore.numTestScore;
+    testScores = new double[numTestScore];
+    for(int i = 0; i < numTestScore; i++)
+        testScores[i] = aTestScore.testScores[i];
 
-TestScore & TestScore::operator =(const TestScore & aTestScore)
-{
-	delete[] testScores;
-	studentName = aTestScore.studentName;
-	numTestScore = aTestScore.numTestScore;
-	testScores = new double[numTestScore];
-	for (int i = 0; i < numTestScore; i++)
-		testScores[i] = aTestScore.testScores[i];
-
-	return (*this);
+    return (*this);
 }

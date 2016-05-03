@@ -1,8 +1,6 @@
-#include <iostream>
-using namespace std;
 #include "StudentList.h"
 
-istream & operator >> (istream &input, StudentList &tempStudentList)
+istream & operator >>(istream & input, StudentList & tempStudentList)
 {
 	int i, n;
 	Student tempStudent;
@@ -20,10 +18,11 @@ istream & operator >> (istream &input, StudentList &tempStudentList)
 		tempStudentList.size++;
 		tempStudentList.sortStudent();
 	}
+
 	return input;
 }
 
-ostream &operator<<(ostream &output, const StudentList &tempStudentList)
+ostream & operator <<(ostream & output, const StudentList & tempStudentList)
 {
 	int i;
 	for (i = 0; i < tempStudentList.getSize(); i++)
@@ -60,7 +59,7 @@ StudentList::StudentList()
 	size = 0;
 }
 
-StudentList::StudentList(const StudentList &tempStudentList) :size(tempStudentList.size)
+StudentList::StudentList(const StudentList & tempStudentList) :size(tempStudentList.size)
 {
 	for (int i = 0; i < getSize(); i++)
 	{
@@ -73,7 +72,7 @@ StudentList::~StudentList()
 	cout << "Destroy StudentList" << endl;
 }
 
-StudentList &StudentList::operator=(const StudentList &tempStudentList)
+StudentList & StudentList::operator =(const StudentList & tempStudentList)
 {
 	int i;
 	size = tempStudentList.size;
@@ -84,7 +83,7 @@ StudentList &StudentList::operator=(const StudentList &tempStudentList)
 	return *this;
 }
 
-void StudentList::operator+=(const Student & tempStudent)
+void StudentList::operator +=(const Student & tempStudent)
 {
 	if (!isFull() && !searchStudent(tempStudent))
 	{
@@ -98,7 +97,7 @@ void StudentList::operator+=(const Student & tempStudent)
 	}
 }
 
-bool StudentList::searchStudent(const MyString &tempID) const
+bool StudentList::searchStudent(const MyString & tempID) const
 {
 	bool found = false;
 	MyString temp;
@@ -131,7 +130,7 @@ bool StudentList::searchStudent(const char *tempID) const
 	return found;
 }
 
-bool StudentList::searchStudent(const Student &tempStudent) const
+bool StudentList::searchStudent(const Student & tempStudent) const
 {
 	bool found = false;
 	for (int i = 0; i < this->getSize(); i++)
@@ -145,7 +144,7 @@ bool StudentList::searchStudent(const Student &tempStudent) const
 	return found;
 }
 
-int StudentList::subscriptStudent(const MyString &tempID) const
+int StudentList::subscriptStudent(const MyString & tempID) const
 {
 	int subscript = -1;
 	MyString temp;
@@ -177,7 +176,7 @@ int StudentList::subscriptStudent(const char *tempID) const
 	return subscript;
 }
 
-int StudentList::subscriptStudent(const Student &tempStudent) const
+int StudentList::subscriptStudent(const Student & tempStudent) const
 {
 	int subscript = -1;
 	for (int i = 0; i < this->getSize(); i++)
@@ -191,7 +190,7 @@ int StudentList::subscriptStudent(const Student &tempStudent) const
 	return subscript;
 }
 
-void StudentList::operator-=(const MyString &tempID)
+void StudentList::operator-=(const MyString & tempID)
 {
 	int subscript;
 	if (!isEmpty() && searchStudent(tempID))
@@ -209,18 +208,18 @@ void StudentList::operator-=(const MyString &tempID)
 	}
 }
 
-void StudentList::operator-=(const char *tempID) 
+void StudentList::operator-=(const char *tempID)
 {
 	int subscript;
 	if (!isEmpty() && searchStudent(tempID))
 	{
-		subscript = subscriptStudent(tempID); 
+		subscript = subscriptStudent(tempID);
 		for (int i = subscript; i<getSize() - 1; i++)
 		{
 			*(stdt + i) = *(stdt + (i + 1));
 		}
 		size--;
-	} 
+	}
 	else
 	{
 		cout<<"Invalid ID"<<endl;
@@ -228,26 +227,26 @@ void StudentList::operator-=(const char *tempID)
 }
 
 bool StudentList::isEmpty() const
-{ 
-	return(this->size == 0); 
+{
+	return(this->size == 0);
 }
 
-bool StudentList::isFull() const 
-{ 
+bool StudentList::isFull() const
+{
 	return(this->size == MAX_STD);
 }
 
-int StudentList::getSize() const 
-{ 
-	return (this->size); 
+int StudentList::getSize() const
+{
+	return (this->size);
 }
 
-Student &StudentList::operator[] (int subscript)
+Student & StudentList::operator[] (int subscript)
 {
 	if ((subscript < 0) || (subscript >= getSize()))
-	{ 
-		cout << "Error: Subscript " << subscript << " out of range \n"; 
-		exit(1); 
+	{
+		cout << "Error: Subscript " << subscript << " out of range \n";
+		exit(1);
 	}
 	return stdt[subscript];
 }
@@ -257,7 +256,7 @@ Student StudentList::operator[] (int subscript) const
 	if ((subscript < 0) || (subscript >= getSize()))
 	{
 		cout << "Error: Subscript " << subscript << " out of range \n";
-		exit(1); 
+		exit(1);
 	}
 	return stdt[subscript];
 }
