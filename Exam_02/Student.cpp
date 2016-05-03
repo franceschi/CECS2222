@@ -123,6 +123,11 @@ const StudentPhone & Student::getPhone()const
     return (this->phone);
 }
 
+const TestScore<double>& Student::getTestScore() const
+{
+	return (this->getTestScore);
+}
+
 const StudentDate & Student::getBirthDate()const
 {
     return (this->birthDate);

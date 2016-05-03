@@ -22,18 +22,17 @@ public:
 
 	~ProductionWorker()
 	{
-		cout << "Exit ProductionWorker";
+		cout << "Exit Production Worker\n";
 	}
 
 	int  getShift() const
 	{
 		if (shift == 1)
 			cout << "Day Shift";
-		if (shift == 2)
+		else if (shift == 2)
 			cout << "Night Shift";
 		else
 			cerr << "Wrong shift number!";
-
 		return shift;
 	}
 

@@ -69,7 +69,7 @@ T TestScore<T>::getTestScore(int index) const
 }
 
 template <class T>
-T & TestScore<T>::operator [](int index)
+T & TestScore<T>::operator[](int index)
 {
     return testScores[index];
 }
@@ -85,4 +85,38 @@ TestScore<T> & TestScore<T>::operator =(const TestScore & aTestScore)
         testScores[i] = aTestScore.testScores[i];
 
     return (*this);
+}
+
+istream & operator >> (istream & in, TestScore & tempTestScore)
+{
+	TestScore tempTestScore;
+
+	temp.areaCode = new char[4];
+	temp.exchange = new char[4];
+	temp.line = new char[5];
+
+	cout << "Enter Phone Number: " << endl;
+	cout << "Enter 3 Digit area code: ";
+	in >> temp.areaCode;
+
+	cout << "Enter 3 digit exchange: ";
+	in >> temp.exchange;
+
+	cout << "Enter 4 digit line: ";
+	in >> temp.line;
+
+	tempPhone = temp;
+
+	delete[]temp.areaCode;
+	delete[]temp.exchange;
+	delete[]temp.line;
+
+	return in;
+}
+
+ostream & operator <<(ostream  & out, const StudentPhone & tempPhone)
+{
+	out << "(" << tempPhone.getAreaCode() << ")" << tempPhone.getExchange() << "-" << tempPhone.getLine();
+
+	return out;
 }

@@ -8,6 +8,9 @@ const double DEFAULT_SCORE = 0.0;
 template <class T>
 class TestScore
 {
+	friend istream & operator >> (istream &, TestScore &);
+	friend ostream & operator <<(ostream &, const TestScore &);
+
     private:
         MyString studentName;
         T *testScores;
@@ -27,8 +30,7 @@ class TestScore
         T getTestScore(int) const;
         TestScore & operator =(const TestScore &);
 
-        T & operator [](int);
-
+        T & operator[](int);
 };
 
 #endif // TESTSCORE_H

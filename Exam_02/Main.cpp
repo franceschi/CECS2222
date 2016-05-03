@@ -11,10 +11,8 @@
 using namespace std;
 
 Student student_00, new_student;
-StudentPhone phone;
-StudentDate date;
 StudentList student_01, student_02;
-TestScore student_grades;
+
 
 
 int main()
