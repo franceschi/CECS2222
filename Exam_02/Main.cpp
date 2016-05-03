@@ -1,3 +1,5 @@
+//Student Program
+
 #include "StudentPhone.h"
 #include "StudentDate.h"
 #include "StudentList.h"
@@ -8,6 +10,12 @@
 #include <iostream>
 using namespace std;
 
+Student student_00, new_student;
+StudentPhone phone;
+StudentDate date;
+StudentList student_01, student_02;
+TestScore student_grades;
+
 
 int main()
 {
@@ -16,19 +24,12 @@ int main()
 	char filename[SIZE];	//To hold a file name.
 
 	cout << "Student Program" << endl;
-	cout << "Enter the name of the file: ";
+	cout << "Enter the name of the file that you wish to write to: ";
 	cin.getline(filename, SIZE);
-
-	Student student_00, new_student;
-	StudentPhone phone;
-	StudentDate date;
-	StudentList student_01, student_02;
-	TestScore student_grades;
 	
+
 	char id[25];
 	int index;
-
-
 
 	cin >> student_01;
 	cout << "Enter the student index: ";
@@ -44,10 +45,6 @@ int main()
 
 	new_student = student_01[0];
 	cout << new_student;
-
-
-
-
 
 
 	return 0;
