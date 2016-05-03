@@ -1,32 +1,34 @@
 #include "StudentPhone.h"
 #include "StudentDate.h"
 #include "StudentList.h"
-//#include "Student.h"
-//#include "MyString.h"
-//#include "TestScore.h"
-//#include <fstream>
+#include "Student.h"
+#include "MyString.h"
+#include "TestScore.h"
+#include <fstream>
 #include <iostream>
 using namespace std;
 
 
 int main()
 {
-	//const int SIZE = 255; //Array Size
-	//char filename[SIZE];  //To hold a file name.
-	//ifstream inputFile;	//File stream object
+	fstream dataFile;		//File stream object
+	const int SIZE = 255;	//Array Size
+	char filename[SIZE];	//To hold a file name.
 
+	cout << "Student Program" << endl;
+	cout << "Enter the name of the file: ";
+	cin.getline(filename, SIZE);
+
+	Student student_00, new_student;
 	StudentPhone phone;
 	StudentDate date;
-
-	//Get the name of the file
-	//cout << "Enter the name of the file: ";
-	//cin.getline(filename, SIZE);
-
 	StudentList student_01, student_02;
+	TestScore student_grades;
+	
 	char id[25];
 	int index;
 
-	Student new_student;
+
 
 	cin >> student_01;
 	cout << "Enter the student index: ";
