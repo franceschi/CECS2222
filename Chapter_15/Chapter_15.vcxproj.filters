@@ -13,38 +13,47 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="PrC_01">
+      <UniqueIdentifier>{f304e558-dbb1-44f4-aa66-ed332a6b4a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrC_02">
+      <UniqueIdentifier>{91d16598-b61c-4b51-a0bf-f89dff510045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dealer">
+      <UniqueIdentifier>{b27502a8-a9a3-4992-bda7-3cfbfb67bf55}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cube.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Automobile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Car.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SUV.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Truck.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Employee.h">
-      <Filter>Header Files</Filter>
+      <Filter>PrC_01</Filter>
     </ClInclude>
     <ClInclude Include="ProductionWorker.h">
-      <Filter>Header Files</Filter>
+      <Filter>PrC_01</Filter>
+    </ClInclude>
+    <ClInclude Include="ShiftSupervisor.h">
+      <Filter>PrC_02</Filter>
+    </ClInclude>
+    <ClInclude Include="Automobile.h">
+      <Filter>Dealer</Filter>
+    </ClInclude>
+    <ClInclude Include="Car.h">
+      <Filter>Dealer</Filter>
+    </ClInclude>
+    <ClInclude Include="SUV.h">
+      <Filter>Dealer</Filter>
+    </ClInclude>
+    <ClInclude Include="Truck.h">
+      <Filter>Dealer</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Pr15-5.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Pr15-6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Pr15-8.cpp">
@@ -54,11 +63,20 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PrC_01.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>PrC_01</Filter>
+    </ClCompile>
+    <ClCompile Include="PrC_02.cpp">
+      <Filter>PrC_02</Filter>
+    </ClCompile>
+    <ClCompile Include="Pr15-6.cpp">
+      <Filter>Dealer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Problem_01.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Problem_02.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

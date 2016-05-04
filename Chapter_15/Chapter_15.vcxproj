@@ -148,6 +148,7 @@
     <ClInclude Include="ProductionWorker.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Cube.h" />
+    <ClInclude Include="ShiftSupervisor.h" />
     <ClInclude Include="SUV.h" />
     <ClInclude Include="Truck.h" />
   </ItemGroup>
@@ -164,10 +165,14 @@
     <ClCompile Include="Pr15-8.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="PrC_01.cpp" />
+    <ClCompile Include="PrC_01.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="PrC_02.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Problem_01.txt" />
+    <Text Include="Problem_02.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
