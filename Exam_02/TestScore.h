@@ -5,7 +5,7 @@
 
 const double DEFAULT_SCORE = 0.0;
 
-template <class T>
+
 class TestScore
 {
 	friend istream & operator >> (istream &, TestScore &);
@@ -13,7 +13,7 @@ class TestScore
 
     private:
         MyString studentName;
-        T *testScores;
+        double *testScores;
         int numTestScore;
         void createTestScoreArray(int size);
 
@@ -27,10 +27,9 @@ class TestScore
         void setStudentName(MyString);
         MyString getStudentName() const;
         int getNumTestScore() const;
-        T getTestScore(int) const;
+        double getTestScore(int) const;
         TestScore & operator =(const TestScore &);
-
-        T & operator[](int);
+		//TestScore & operator[](int);
 };
 
 #endif // TESTSCORE_H

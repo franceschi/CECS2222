@@ -1,14 +1,13 @@
 #include "TestScore.h"
 
-template <class T>
-TestScore<T>::TestScore()
+
+TestScore::TestScore()
 {
     numTestScore = DEFAULT_SCORE;
     createTestScoreArray(1);
 }
 
-template <class T>
-TestScore<T>::TestScore(MyString name, int numScores)
+TestScore::TestScore(MyString name, int numScores)
 {
     studentName = name;
     createTestScoreArray(numScores);
@@ -25,14 +24,14 @@ TestScore<T>::TestScore(const TestScore & aTestScore)
 }
 
 
-template <class T>
-TestScore<T>::~TestScore()
+
+TestScore::~TestScore()
 {
     delete [] testScores;
 }
 
-template <class T>
-void TestScore<T>::createTestScoreArray(int size)
+
+void TestScore::createTestScoreArray(int size)
 {
     numTestScore = size;
     testScores = new double[size];
@@ -40,42 +39,36 @@ void TestScore<T>::createTestScoreArray(int size)
         testScores[i] = DEFAULT_SCORE;
 }
 
-template <class T>
-void TestScore<T>::setTestScore(double score, int index)
+
+void TestScore::setTestScore(double score, int index)
 {
     testScores[index] = score;
 }
-template <class T>
-void TestScore<T>::setStudentName(MyString name)
+
+void TestScore::setStudentName(MyString name)
 {
     studentName = name;
 }
 
-template <class T>
-MyString TestScore<T>::getStudentName() const
+
+MyString TestScore::getStudentName() const
 {
     return studentName;
 }
-template <class T>
-int TestScore<T>::getNumTestScore() const
+
+int TestScore::getNumTestScore() const
 {
     return numTestScore;
 }
 
-template <class T>
-T TestScore<T>::getTestScore(int index) const
+double TestScore::getTestScore(int index) const
 {
     return testScores[index];
 }
 
-template <class T>
-T & TestScore<T>::operator[](int index)
-{
-    return testScores[index];
-}
 
-template <class T>
-TestScore<T> & TestScore<T>::operator =(const TestScore & aTestScore)
+
+TestScore & TestScore::operator =(const TestScore & aTestScore)
 {
     delete[] testScores;
     studentName = aTestScore.studentName;
@@ -89,34 +82,14 @@ TestScore<T> & TestScore<T>::operator =(const TestScore & aTestScore)
 
 istream & operator >> (istream & in, TestScore & tempTestScore)
 {
-	TestScore tempTestScore;
 
-	temp.areaCode = new char[4];
-	temp.exchange = new char[4];
-	temp.line = new char[5];
-
-	cout << "Enter Phone Number: " << endl;
-	cout << "Enter 3 Digit area code: ";
-	in >> temp.areaCode;
-
-	cout << "Enter 3 digit exchange: ";
-	in >> temp.exchange;
-
-	cout << "Enter 4 digit line: ";
-	in >> temp.line;
-
-	tempPhone = temp;
-
-	delete[]temp.areaCode;
-	delete[]temp.exchange;
-	delete[]temp.line;
+	cout << "Enter your test scores: " << endl;
+	in >> tempTestScore.numTestScore;
 
 	return in;
 }
 
-ostream & operator <<(ostream  & out, const StudentPhone & tempPhone)
+ostream & operator << (ostream & out,  TestScore &tempTestScore)
 {
-	out << "(" << tempPhone.getAreaCode() << ")" << tempPhone.getExchange() << "-" << tempPhone.getLine();
-
-	return out;
+	out << "(" << tempTestScore.getNumTestScore() << ")" <<  endl;
 }

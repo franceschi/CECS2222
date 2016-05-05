@@ -1,22 +1,18 @@
 //Student Program
 
-#include "StudentPhone.h"
-#include "StudentDate.h"
 #include "StudentList.h"
-#include "Student.h"
-#include "MyString.h"
-#include "TestScore.h"
 #include <fstream>
-#include <iostream>
+
 using namespace std;
 
-Student student_00, new_student;
-StudentList student_01, student_02;
 
+StudentList student_01;
 
 
 int main()
 {
+
+	/*
 	fstream dataFile;		//File stream object
 	const int SIZE = 255;	//Array Size
 	char filename[SIZE];	//To hold a file name.
@@ -43,7 +39,7 @@ int main()
 
 	new_student = student_01[0];
 	cout << new_student;
-
+	*/
 
 	return 0;
 }

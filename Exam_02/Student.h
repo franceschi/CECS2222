@@ -18,7 +18,7 @@ class Student
         MyString id;
         StudentDate birthDate;
         StudentPhone phone;
-        TestScore<double> score;
+        TestScore score;
 
     public:
         Student();
@@ -32,14 +32,14 @@ class Student
         void setID(const MyString &);
         void setBirthDate(const StudentDate &);
         void setPhone(const StudentPhone &);
-        void setTestScore(const TestScore<double> &);
+        void setTestScore(const TestScore &);
 
         const MyString & getFirstName() const;
         const MyString & getLastName() const;
         const MyString & getID() const;
         const StudentDate & getBirthDate() const;
         const StudentPhone & getPhone()const;
-        const TestScore<double> & getTestScore () const;
+        const TestScore & getTestScore () const;
 
         Student & operator =(const Student &);
 };

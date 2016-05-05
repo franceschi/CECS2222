@@ -22,10 +22,6 @@ istream & operator >>(istream & in, StudentPhone & tempPhone)
 
     tempPhone = temp;
 
-    delete []temp.areaCode;
-    delete []temp.exchange;
-    delete []temp.line;
-
     return in;
 }
 
