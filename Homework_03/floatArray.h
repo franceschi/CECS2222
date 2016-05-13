@@ -5,25 +5,25 @@
 class floatArray 
 {
 private:
-	float *list; //Pointer to Array
-	int numElements; 
+	float *aptr;
+	float max, min, avg;
+	int arraySize; 
 
 public:
-	bool isValid(int); 
-	floatArray(int); 
+	
+	floatArray(int);
 	~floatArray();
-	void setElement(int, float);
-	int getElement(int);
+	int size() const
+	{
+		return arraySize;
+	}
 
-	//Setter			
-	void setHighest(double);        
-	void setLowest(double);        
-	void setAverage(double);       
-
-	//Acessor								
-	double getHighest() const;
-	double getLowest() const;
-	double getAverage() const;
+	void storeNumber(float num, int ele);
+	float getNumber(int ele);
+								
+	float getHighest() const;
+	float getLowest() const;
+	float getAverage() const;
 
 };
 #endif

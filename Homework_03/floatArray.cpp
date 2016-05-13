@@ -10,117 +10,71 @@ using namespace std;
 
 floatArray::floatArray(int size)
 {
-	list = new float[size];				// points to a dynamically allocated array of integers
-	numElements = size;                // number of elements in the array
-	for (int index = 0; index<size; index++)
-		list[index] = 0;
-
+	arraySize = size;
+	aptr = new float[size];				
+	for (int index = 0; index < arraySize; index++)
+		*(aptr + index) = 0;
 }
+
 
 floatArray::~floatArray()
 {
-	delete[]list;
+	if(arraySize>0)
+	delete[]aptr;
 }
 
-//isValid member function
 
-bool floatArray::isValid(int element)
+void floatArray::storeNumber(float num, int ele)
 {
-	return (element >= 0 && element < numElements);
+	if (ele < arraySize)
+		*(aptr + ele) = num;
 }
 
-//setElement member function
-
-void floatArray::setElement(int element, float value)
+float floatArray:: getNumber(int ele)
 {
-	if (isValid(element))
-		list[element] = value;
-	else
+	return *(aptr+ele);
+}
+
+
+float floatArray::getHighest() const
+{
+	float high = *(aptr + 0);
+	
+	for (int i = 1; i < arraySize; i++)
 	{
-		cout << "Error: Invalid subscript\n";
-		exit(EXIT_FAILURE);
-	}
-}
-
-//getElement member function
-
-int floatArray::getElement(int element)
-{
-	if (isValid(element))
-		return list[element];
-	else
-	{
-		cout << "Error: Invalid subscript\n";
-		exit(EXIT_FAILURE);
-	}
-}
-
-void floatArray::setHighest(double)
-{
-}
-
-void floatArray::setLowest(double)
-{
-}
-
-void floatArray::setAverage(double)
-{
-}
-
-//getHighest
-double floatArray::getHighest() const
-{
-	int count;      
-	double highest; 
-
-	highest = list[0];
-
-	// step through array size to compare
-	for (count = 1; count < numElements; count++)
-	{
-		if (list[count] > highest)
+		if (high<*(aptr+i))
 		{
-			// stores the highest number
-			highest = list[count];
+			high = *(aptr + i);
 		}
 	}
-	return  highest;
+	return  high;
 }
 
 
-// getLowest
-double floatArray::getLowest() const
+float floatArray::getLowest() const
 {
-	int count;      
-	double lowest;  
+	float low = *(aptr + 0);
 
-	lowest = list[0];
-
-	// step through array size to compare
-	for (count = 1; count < numElements; count++)
+	for (int i = 1; i < arraySize; i++)
 	{
-		if (list[count] < lowest)
+		if (low>*(aptr + i))
 		{
-			// stores the lowest number
-			lowest = list[count];
+			low = *(aptr + i);
 		}
 	}
-	return  lowest;
+	return  low;
 }
 
-// only return value
-double floatArray::getAverage() const
-{
-	double total = 0.0;   
-	int count;           
-	double average = 0.0;        
 
-	 // step through array size to add up numbers
-	for (count = 0; count < numElements; count++)
+float floatArray::getAverage() const
+{
+	float average = 0;
+
+	for (int i = 0; i < arraySize; i++)
 	{
-		total = +list[count];
+		average += *(aptr + i);
+		average = (average / arraySize);
 	}
-	average = (total / count);
 	return average;
 
 }

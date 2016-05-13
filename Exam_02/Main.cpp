@@ -1,6 +1,5 @@
 //Student Program
 
-#include "StudentList.h"
 #include <fstream>
 
 using namespace std;
@@ -12,7 +11,7 @@ StudentList student_01;
 int main()
 {
 
-	/*
+	
 	fstream dataFile;		//File stream object
 	const int SIZE = 255;	//Array Size
 	char filename[SIZE];	//To hold a file name.
@@ -39,7 +38,7 @@ int main()
 
 	new_student = student_01[0];
 	cout << new_student;
-	*/
+	
 
 	return 0;
 }

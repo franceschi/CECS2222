@@ -6,33 +6,20 @@ using namespace std;
 
 int main()
 {
-	//const int SIZE = 3;
-	//floatArray numbers(SIZE);
-	int val, x;
-	float *s;
-
-	floatArray numbers();
+	const int SIZE = 10;
 	
-	cout << "Enter the number for the array: ";
-	cin>> val;
 
-	s = new float[x];
+	floatArray list(SIZE);
+	
+	list.storeNumber(6,4);
+	list.storeNumber(9,8);
+	list.storeNumber(3,1);
 
-	for (x = 0; x<val; x++)
-	{
-		//Store Number
-		cout << "Enter a number"; 
-		cin >> *(s + x);
-		numbers.setElement(x);
-		cout << " " << numbers.getElement(x) << endl;
-
-	}
+	cout << "Highest : " << list.getHighest() << endl;
+	cout << "Lowest: " << list.getLowest() << endl;
+	cout << "Average: " << list.getAverage() << endl;
 	cout << endl;
-	cout << "Highest : " << numbers.getHighest() << endl;
-	cout << "Lowest: " << numbers.getLowest() << endl;
-	cout << "Average: " << numbers.getAverage() << endl;
-	cout << endl;
-	cin.get();
+
 }
 
 

@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{967C8A80-7816-41C7-8073-C3FAFA2E43F0}</ProjectGuid>
+    <ProjectGuid>{FB9EA828-3EBC-415D-AACA-B01197525942}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Exam_02</RootNamespace>
+    <RootNamespace>Exam_II</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,24 +142,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="MyString.cpp" />
-    <ClCompile Include="Source Files\main.cpp" />
-    <ClCompile Include="Student.cpp" />
-    <ClCompile Include="StudentDate.cpp" />
-    <ClCompile Include="StudentList.cpp" />
-    <ClCompile Include="StudentPhone.cpp" />
-    <ClCompile Include="TestScore.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="MyString.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="StudentDate.h" />
     <ClInclude Include="StudentList.h" />
     <ClInclude Include="StudentPhone.h" />
-    <ClInclude Include="TestScore.h" />
+    <ClInclude Include="StudentTestScore.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyString.cpp" />
+    <ClCompile Include="Student.cpp" />
+    <ClCompile Include="StudentDate.cpp" />
+    <ClCompile Include="StudentList.cpp" />
+    <ClCompile Include="StudentPhone.cpp" />
+    <ClCompile Include="StudentTestScore.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
