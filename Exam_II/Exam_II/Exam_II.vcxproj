@@ -147,15 +147,15 @@
     <ClInclude Include="StudentDate.h" />
     <ClInclude Include="StudentList.h" />
     <ClInclude Include="StudentPhone.h" />
-    <ClInclude Include="StudentTestScore.h" />
+    <ClInclude Include="TestScore.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="MyString.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentDate.cpp" />
     <ClCompile Include="StudentList.cpp" />
     <ClCompile Include="StudentPhone.cpp" />
-    <ClCompile Include="StudentTestScore.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

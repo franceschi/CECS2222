@@ -21,8 +21,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HerenciaExample", "Herencia
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chapter_15", "Chapter_15\Chapter_15.vcxproj", "{FF5E6A28-4C4F-47A3-B172-6E4515B91AB0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exam_02", "Exam_02\Exam_02.vcxproj", "{967C8A80-7816-41C7-8073-C3FAFA2E43F0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -103,14 +101,6 @@ Global
 		{FF5E6A28-4C4F-47A3-B172-6E4515B91AB0}.Release|x64.Build.0 = Release|x64
 		{FF5E6A28-4C4F-47A3-B172-6E4515B91AB0}.Release|x86.ActiveCfg = Release|Win32
 		{FF5E6A28-4C4F-47A3-B172-6E4515B91AB0}.Release|x86.Build.0 = Release|Win32
-		{967C8A80-7816-41C7-8073-C3FAFA2E43F0}.Debug|x64.ActiveCfg = Debug|x64
-		{967C8A80-7816-41C7-8073-C3FAFA2E43F0}.Debug|x64.Build.0 = Debug|x64
-		{967C8A80-7816-41C7-8073-C3FAFA2E43F0}.Debug|x86.ActiveCfg = Debug|Win32
-		{967C8A80-7816-41C7-8073-C3FAFA2E43F0}.Debug|x86.Build.0 = Debug|Win32
-		{967C8A80-7816-41C7-8073-C3FAFA2E43F0}.Release|x64.ActiveCfg = Release|x64
-		{967C8A80-7816-41C7-8073-C3FAFA2E43F0}.Release|x64.Build.0 = Release|x64
-		{967C8A80-7816-41C7-8073-C3FAFA2E43F0}.Release|x86.ActiveCfg = Release|Win32
-		{967C8A80-7816-41C7-8073-C3FAFA2E43F0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

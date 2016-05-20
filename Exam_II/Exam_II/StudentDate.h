@@ -16,7 +16,7 @@ private:
 public:
 	StudentDate();
 	StudentDate(int, int, int);
-	StudentDate(const StudentDate &);
+	StudentDate(const StudentDate &tempDate);
 	~StudentDate();
 
 	void setValues(int, int, int);
@@ -28,7 +28,7 @@ public:
 	int getDay() const;
 	int getYear() const;
 
-	StudentDate & operator =(const StudentDate &);
+	StudentDate & operator =(const StudentDate &tempDate);
 
 };
 

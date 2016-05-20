@@ -1,6 +1,5 @@
 #pragma once
-#ifndef COINTOSSSIMULATOR_H
-#define COINTOSSSIMULATOR_H
+
 #include <string>
 #include <iostream>
 #include <cstdlib>
@@ -18,4 +17,3 @@ public:
 
 };
 
-#endif // !COINTOSSSIMULATOR_H

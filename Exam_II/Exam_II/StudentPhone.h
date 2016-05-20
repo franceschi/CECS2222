@@ -10,25 +10,29 @@ class StudentPhone
 	friend ostream & operator << (ostream &, const StudentPhone &);
 
 private:
-	char *areaCode;     
-	char *exchange;      
-	char *line;           
+	int areaCode;     
+	int exchange;      
+	int line;
+	int cellPhone;
 
 public:
-	StudentPhone();
-	StudentPhone(const char *, const char *, const char *);
+	
+	StudentPhone(int, int, int);
 	StudentPhone(const StudentPhone &);
+	StudentPhone();
 	~StudentPhone();
 
-	void setValues(const char *, const char *, const char *);
-	void setAreaCode(const char *);
-	void setExchange(const char *);
-	void setLine(const char *);
+	void setValues(int, int, int);
+	void setAreaCode(int);
+	void setExchange(int);
+	void setLine(int);
 
-	const char *getAreaCode() const;
-	const char *getExchange() const;
-	const char *getLine() const;
+	int getAreaCode() const;
+	int getExchange() const;
+	int getLine() const;
+	int getCellPhone() const;
 
 	StudentPhone & operator =(const StudentPhone &);
+
 };
 

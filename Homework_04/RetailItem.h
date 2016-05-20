@@ -2,10 +2,8 @@
 
 #pragma once
 #include <iostream>
-using namespace std;
 #include <string>
-#define RetailItem_H
-#ifndef RetailItem_H
+using namespace std;
 
 
 class RetailItem
@@ -17,20 +15,20 @@ private:
 	double price;
 
 public:
-	RetailItem();
-	RetailItem(string, int, double);
+	RetailItem(string dsc, int units, double prc);
 	RetailItem(const RetailItem & tempRetailItem);
+	RetailItem();
 	~RetailItem();
 
 	//Setter & Getters
 
-	string setDescription(string);
-	int setUnitsOnHand(int);
-	double setPrice(double);
+	void setDescription(string dsc);
+	void setUnitsOnHand(int units);
+	void setPrice(double prc);
 
-	void getDescription() const;
-	void getUnitsOnHand() const;
-	void getPrice() const;
+	string getDescription();
+	int getUnitsOnHand();
+	double getPrice();
 
 };
-#endif // !RetailItem_H
+

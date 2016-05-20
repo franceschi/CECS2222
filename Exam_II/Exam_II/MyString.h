@@ -23,10 +23,8 @@ public:
 	MyString &operator=(char cha);
 	MyString &operator =(const MyString &aMyString);
 
-
 	void setS(const char *s);
 	const char* getS()const;
-
 
 	MyString operator+(const char* s)const;
 	MyString operator+(char ch)const;

@@ -1,17 +1,16 @@
 #include "Student.h"
 
 
-Student::Student():firstName("Jesus"),lastName("Christ"),id("777"),birthDate(),phone(),score(){}
+Student::Student():firstName("Jesus"),lastName("Christ"),id("777"),birthDate(),phone(),tests(){}
 
 Student::Student(const MyString & tempFirstName, const MyString & tempLastName, const MyString & tempID,
-	 const StudentDate & tempBirthDate, const StudentPhone & tempPhone, const TestScore & tempScore)
+	 const StudentDate & tempBirthDate, const StudentPhone & tempPhone)
 {
 	setFirstName(tempFirstName);
 	setLastName(tempLastName);
 	setID(tempID);
 	setBirthDate(tempBirthDate);
 	setPhone(tempPhone);
-	setTestScore(tempScore);
 }
 
 Student::Student(const Student & tempStudent)
@@ -21,23 +20,21 @@ Student::Student(const Student & tempStudent)
 	setID(tempStudent.getID());
 	setBirthDate(tempStudent.getBirthDate());
 	setPhone(tempStudent.getPhone());
-	setTestScore(tempStudent.getTestScore());
 }
 
 Student::~Student()
 {
-	cout << "Student destructor:" << endl;
 }
 
 void Student::setValues(const MyString & tempFirstName, const MyString & tempLastName, const MyString & tempID,
-	  const StudentDate & tempBirthDate, const StudentPhone & tempPhone, const TestScore & tempScore)
+	  const StudentDate & tempBirthDate, const StudentPhone & tempPhone)
 {
 	setFirstName(tempFirstName);
 	setLastName(tempLastName);
 	setID(tempID);
 	setBirthDate(tempBirthDate);
 	setPhone(tempPhone);
-	setTestScore(tempScore);
+
 }
 
 void Student::setFirstName(const MyString & tempFirstName)
@@ -62,16 +59,14 @@ void Student::setPhone(const StudentPhone & tempPhone)
 	phone.setLine(tempPhone.getLine());
 }
 
+
+
+
 void Student::setBirthDate(const StudentDate & tempDate)
 {
 	birthDate.setMonth(tempDate.getMonth());
 	birthDate.setDay(tempDate.getDay());
 	birthDate.setYear(tempDate.getYear());
-}
-
-void Student::setTestScore(const TestScore & tempScore)
-{
-	score.setTestScore(tempScore.getTestScore());
 }
 
 const MyString & Student::getFirstName() const
@@ -99,9 +94,9 @@ const StudentPhone & Student::getPhone()const
 	return (this->phone);
 }
 
-const TestScore & Student::getTestScore() const
+const StudentTestScores & Student::getScores() const
 {
-	return (this->score);
+	return (this->tests);
 }
 
 
@@ -113,30 +108,29 @@ Student & Student::operator=(const Student & tempStudent)
 	this->id = tempStudent.getID();
 	this->birthDate = tempStudent.getBirthDate();
 	this->phone = tempStudent.getPhone();
-	this->score = tempStudent.getTestScore();
+
 
 	return (*this);
 }
 
 istream & operator >> (istream & in, Student & tempStudent)
 {
+	cin.ignore();
 	cout << "First Name: ";
 	in >> tempStudent.firstName;
 
+	cin.ignore();
 	cout << "Last Name: ";
 	in >> tempStudent.lastName;
 
 	cout << "Id: ";
 	in >> tempStudent.id;
 
-	cout << "BirthDate: \nmm/dd/yyyy: " << endl;
+	cout << "Enter Birthdate (mm/dd/yyyy): " << endl;
 	in >> tempStudent.birthDate;
 
-	cout << "Phone ### ### ####: ";
+	cout << "Enter Phone Number (###-###-####): ";
 	in >> tempStudent.phone;
-
-	cout << "Test Score: ";
-	in >> tempStudent.score;
 
 	return in;
 }

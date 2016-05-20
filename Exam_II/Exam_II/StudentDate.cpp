@@ -3,7 +3,7 @@
 
 StudentDate::StudentDate()
 {
-	setValues(12, 31, 2000);
+	setValues(12, 25, 0000);
 }
 
 StudentDate::StudentDate(int tempMonth, int tempDay, int tempYear)
@@ -25,7 +25,6 @@ void StudentDate::setValues(int tempMonth, int tempDay, int tempYear)
 	setMonth(tempMonth);
 	setDay(tempDay);
 	setYear(tempYear);
-
 }
 
 void StudentDate::setMonth(int tempMonth)

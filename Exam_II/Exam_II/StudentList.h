@@ -1,22 +1,23 @@
-#pragma once
 #include"Student.h"
+#include"TestScore.h"
 
 const int MAX_STD = 10;
+const int MAX_TST = 4;
 
 class StudentList
 {
 	friend istream & operator >> (istream &, StudentList &);
-	friend ostream & operator << (ostream &, const StudentList &);
+	friend ostream & operator <<(ostream &, const StudentList &);
 
 private:
+	
 	Student stdt[MAX_STD];
 	int size;
 	void sortStudent();
 
 public:
-
-	StudentList();
 	StudentList(const StudentList &);
+	StudentList();
 	~StudentList();
 
 	int getSize() const;
@@ -40,4 +41,3 @@ public:
 	Student operator [](int) const;
 
 };
-

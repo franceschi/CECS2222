@@ -27,7 +27,7 @@
     <ClInclude Include="StudentDate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StudentTestScore.h">
+    <ClInclude Include="TestScore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StudentList.h">
@@ -47,7 +47,7 @@
     <ClCompile Include="StudentDate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StudentTestScore.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StudentList.cpp">

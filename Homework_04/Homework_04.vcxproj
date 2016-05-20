@@ -145,7 +145,10 @@
     <ClInclude Include="RetailItem.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ReadMe.txt" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ReadMe.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="RetailItem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
