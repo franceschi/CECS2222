@@ -67,7 +67,7 @@ public:
 
 	void setGrades(int, double) const
 	{
-
+		//TODO!
 	}
 
 	// Overloaded = operator
@@ -76,7 +76,7 @@ public:
 		numTestScores = tempTest.numTestScores;
 		
 		for (int i = 0; i < numTestScores; i++)
-		this->testScores[i] = tempTest.testScores[i];
+		this->testScores[i] = tempTest.testScores[i]; 
 		return *this;
 	}
 
