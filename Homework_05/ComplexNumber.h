@@ -20,7 +20,6 @@ private:
 	double imaginaryPart;
 public:
 	ComplexNumbers(double realPart=0.00, double imaginaryPart=0.00);
-	//ComplexNumbers(const ComplexNumbers & aComplexNumbers);
 	~ComplexNumbers();
 
 	ComplexNumbers operator+(const ComplexNumbers & aComplexNumbers) const;
