@@ -144,6 +144,12 @@
   <ItemGroup>
     <Text Include="ReadME.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ComplexNumber.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ComplexNumber.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
