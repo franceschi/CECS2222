@@ -1,27 +1,22 @@
-//
 //  ComplexNumbers.cpp
 //  
 //
 //  Created by Miguel Franceschi on 5/22/16.
-//
-//
 
 #include "ComplexNumber.h"
 
 ostream & operator<<(ostream & out, const ComplexNumbers & aComplexNumbers)
 {
-	//insert return statement here
-	out << "C";
+	out << "(";
 	out << aComplexNumbers.realPart;
-	out << ",";
+	out << "x +";
 	out << aComplexNumbers.imaginaryPart;
-	out << ")";
+	out << "i)";
 	return out;
 }
 
 istream & operator >> (istream & in, ComplexNumbers & aComplexNumbers)
 {
-	// TODO: insert return statement here
 	char ch;
 	in >> ch;
 	in >> aComplexNumbers.realPart;
