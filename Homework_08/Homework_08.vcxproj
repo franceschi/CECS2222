@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{EBB9ED45-2C8A-4497-BB86-790B84809634}</ProjectGuid>
+    <ProjectGuid>{0095ED82-8517-4CD4-90F1-C858E3A7C9D4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Homework_05</RootNamespace>
+    <RootNamespace>Homework_08</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,17 +142,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadME.txt" />
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ComplexNumber.h" />
+    <ClInclude Include="FeetInches.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ComplexNumber.cpp" />
+    <ClCompile Include="FeetInches.cpp" />
     <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Homework_10\ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
